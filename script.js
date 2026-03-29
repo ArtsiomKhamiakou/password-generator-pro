@@ -1,3 +1,6 @@
+// Генератор паролей Pro
+// Версия 1.0
+// Автор: Ваше имя
 // DOM элементы
 const passwordInput = document.getElementById('password');
 const generateBtn = document.getElementById('generateBtn');
