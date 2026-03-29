@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей | Безопасные пароли</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Генератор паролей Pro</h1>
+        
+        <div class="password-display">
+            <input type="text" id="password" readonly placeholder="Нажмите 'Сгенерировать'">
+            <button id="copyBtn" class="copy-btn">📋</button>
+        </div>
+        
+        <div class="controls">
+            <label>
+                Длина пароля: <span id="lengthValue">12</span>
+                <input type="range" id="length" min="6" max="32" value="12">
+            </label>
+            
+            <label>
+                <input type="checkbox" id="uppercase" checked> Заглавные буквы (A-Z)
+            </label>
+            <label>
+                <input type="checkbox" id="lowercase" checked> Строчные буквы (a-z)
+            </label>
+            <label>
+                <input type="checkbox" id="numbers" checked> Цифры (0-9)
+            </label>
+            <label>
+                <input type="checkbox" id="symbols"> Символы (!@#$%^&*)
+            </label>
+        </div>
+        
+        <button id="generateBtn" class="generate-btn">✨ Сгенерировать пароль</button>
+        
+        <div class="strength-meter">
+            <h3>Надежность пароля:</h3>
+            <div class="strength-bar">
+                <div id="strengthFill" class="strength-fill"></div>
+            </div>
+            <span id="strengthText">-</span>
+        </div>
+        
+        <div class="history">
+            <h3>📜 История паролей</h3>
+            <button id="clearHistory" class="clear-btn">Очистить историю</button>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
