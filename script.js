@@ -162,3 +162,12 @@ loadHistory();
 setTimeout(() => {
     generateAndDisplay();
 }, 100);
+document.getElementById('resetBtn')?.addEventListener('click', () => {
+    document.getElementById('length').value = '12';
+    document.getElementById('lengthValue').textContent = '12';
+    document.getElementById('uppercase').checked = true;
+    document.getElementById('lowercase').checked = true;
+    document.getElementById('numbers').checked = true;
+    document.getElementById('symbols').checked = false;
+    generateAndDisplay();
+});
